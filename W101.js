@@ -26,15 +26,25 @@ function ready() {
     
     var today = new Date().toISOString().split('T')[0];
     document.getElementById("cinDate").setAttribute('min', today);
-    document.getElementsByName('cinDate')[0].value = today;
+    document.getElementById('cinDate').value = today;
+    updateMinCout();
+
     document.getElementById('cinDate').addEventListener('change', updateMinCout);
+    document.getElementById('coutDate').addEventListener('change', updateTotalCost);
 }
 
 function updateMinCout () {
     var cinDate = new Date(document.getElementById('cinDate').value);
     var coutDate = new Date(cinDate.getTime()+(7*24*60*60*1000)).toISOString().split('T')[0];
-    console.log(coutDate);
+    document.getElementById('coutDate').value = coutDate;
     document.getElementById("coutDate").setAttribute('min', coutDate);
+}
+
+function calcDuration () {
+    var cinDate = new Date(document.getElementById('cinDate').value);
+    var coutDate = new Date(document.getElementById('coutDate').value);
+    var duration = Math.round((coutDate.getTime()-cinDate.getTime())/(24*60*60*1000));
+    return duration;
 }
 
 function addRoom(event) {
@@ -59,6 +69,10 @@ function decrementValue(event) {
     var value = buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value;
     value--;
     buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value = value;
+    if (value == 0 ) {
+        buttonClicked.parentElement.parentElement.parentElement.style.display = 'none';
+        buttonClicked.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('select-btn')[0].style.display = 'flex';
+    }
     updateTotalCost();
 } 
 
@@ -70,37 +84,7 @@ function updateTotalCost() {
     var qty = parseInt(cartItemContainer[i].getElementsByClassName('productQty')[0].value)
     total = total + price*qty;
     }
-    document.getElementsByClassName('costing-value')[0].innerText = '₹' + total;
+    var duration = calcDuration();
+    gtotal = total*duration;
+    document.getElementsByClassName('costing-value')[0].innerText = '₹' + gtotal;
 }
-
-/*
-<script>
-function addRoom(){
-    document.getElementById('select-btn').style = "display : none;";
-    document.getElementById('number-btn').style = "display : flex;";
-    document.getElementById('productQty').value = "1";
-}
-
-function incrementValue(){
-    var value = parseInt(document.getElementById('productQty').value, 10);
-    if(value == "5")
-    {
-        document.getElementById('plus-btn').style.pointer = 'none';
-    }
-    value++;
-    document.getElementById('productQty').value = value;
-    }
-function decrementValue()
-{
-    var value = parseInt(document.getElementById('productQty').value, 10);
-    if(value == "1") {
-        document.getElementById('select-btn').style = "display : flex;";
-        document.getElementById('number-btn').style = "display : none;";
-        document.getElementById('productQty').value = "0";
-    }
-    else {
-    value--;
-    document.getElementById('productQty').value = value;
-    }
-}
-</script>*/
