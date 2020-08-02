@@ -6,6 +6,12 @@ if (document.readyState == 'loading') {
 
 function ready() {
 
+    var slideshow = document.getElementsByClassName('gallery-container')[0];
+    slideshow.addEventListener('click',showSlideShow)
+
+    var cross = document.getElementsByClassName('cross-box')[0];
+    cross.addEventListener('click', closeSlideshow);
+
     var addRoomButtons = document.getElementsByClassName('select-btn');
     for (var i = 0; i < addRoomButtons.length; i++) {
         var button = addRoomButtons[i];
@@ -29,6 +35,16 @@ function ready() {
 
     document.getElementById('cinDate').addEventListener('change', updateMinCout);
     document.getElementById('coutDate').addEventListener('change', checkMinCout);
+}
+
+function showSlideShow (event) {
+    document.getElementsByClassName('slideshow-main-container')[0].style.display = 'block';
+    document.getElementsByClassName('page-container')[0].style.display = 'none';
+}
+
+function closeSlideshow(event) {
+    document.getElementsByClassName('slideshow-main-container')[0].style.display = 'none';
+    document.getElementsByClassName('page-container')[0].style.display = 'block';
 }
 
 function updateMinCin () {

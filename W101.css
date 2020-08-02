@@ -22,21 +22,51 @@ code {
 }
   
 .slideshow-main-container {
-    z-index: 100;
     width: 100%;
 }
 
-.slideshow-top {
+.slideshow-top-container {
     position: sticky;
     top: 0px;
+    height: 20vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    border-bottom: solid 2px green;
+}
+
+.cross-box {
+    width: 15vw;
+    height: 100%;
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow-top {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
+.cross-box img {
+    width: 7vw;
+}
+
 .slideshow-top span {
     line-height: 5vw;
-    padding: 0px 15vw;
+    padding: 0px;
+}
+
+.slideshow-image {
+    width: 100vw;
+    height: 57vw;
+    margin-top: 5vw;
+    border-top: solid 2px grey;
+    border-bottom: solid 2px grey;
 }
 
 
