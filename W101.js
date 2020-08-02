@@ -24,20 +24,43 @@ function ready() {
         button.addEventListener('click',decrementValue)
     }
     
+    updateMinCin();
+    updateMinCout();
+
+    document.getElementById('cinDate').addEventListener('change', updateMinCout);
+    document.getElementById('coutDate').addEventListener('change', checkMinCout);
+}
+
+function updateMinCin () {
     var today = new Date().toISOString().split('T')[0];
     document.getElementById("cinDate").setAttribute('min', today);
     document.getElementById('cinDate').value = today;
     updateMinCout();
-
-    document.getElementById('cinDate').addEventListener('change', updateMinCout);
-    document.getElementById('coutDate').addEventListener('change', updateTotalCost);
 }
 
 function updateMinCout () {
     var cinDate = new Date(document.getElementById('cinDate').value);
+    var today = new Date();
+    var d = Math.round((cinDate.getTime() - today.getTime())/(24*60*60*1000));
+    if (d < -1){
+        updateMinCin();
+    } else {
     var coutDate = new Date(cinDate.getTime()+(7*24*60*60*1000)).toISOString().split('T')[0];
     document.getElementById('coutDate').value = coutDate;
     document.getElementById("coutDate").setAttribute('min', coutDate);
+    }
+}
+
+function checkMinCout () {
+    var minCoutDate = new Date(document.getElementById('cinDate').value);
+    var coutDate = new Date(document.getElementById('coutDate').value);
+    var d = Math.round( ( (coutDate.getTime() - minCoutDate.getTime() )/ (24*60*60*1000) ) );
+    console.log(d);
+    if (d < 7) {
+        updateMinCout();
+    } else {
+        updateTotalCost();
+    }
 }
 
 function calcDuration () {
