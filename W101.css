@@ -45,35 +45,40 @@ code {
     gap: 1vw;
 }
 
+.inclusions-container::-webkit-scrollbar {
+    display: none;
+  }
+
 .inclusions-object {
     flex: none;
-    width: 14vw;
+    width: 20vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.9vw;
+    font-size: 2.5vw;
     margin: 1vw;
 }
 
 .inclusions-object img{
+    width: 7vw;
     margin-bottom: .5vw;
 }
 
 .property-name {
     font-weight: 700;
-    font-size: 4.5vw;
+    font-size: 6.5vw;
+    line-height: 7.5vw;
     color: #414141;
     display: flex;
     align-items: flex-start;
     text-transform: capitalize;
-    padding: 0px;
-    margin: 0px;
+    margin: 1vw 0vw;
 }
 
 .property-name span {
     color: white;
     font-size: .45em;
-    background-color: rgb(255, 107, 108);
+    background-color: #62d8d2;
     margin-left: 1.2em;
     margin-top: .5em;
     font-weight: 400;
@@ -89,7 +94,7 @@ code {
 .heading {
     color: #414141;
     font-weight: 600;
-    font-size: 3.5vw;
+    font-size: 5vw;
 }
 
 .gallery-container {
@@ -299,9 +304,9 @@ code {
 
 .nearby-name {
     color: #474950;
-    font-size: 1.3em;
+    font-size: 3.3vw;
     font-weight: bold;
-    margin: 5px 0px 0px 15px;
+    margin: 5px 0px 0px 2vw;
 }
 
 .nearby-distance {
@@ -311,7 +316,7 @@ code {
 }
 
 .nearby-distance p {
-    padding: 0px 15px;
+    padding: 0px 2vw;
     font-size: 0.9em;
 }
 
@@ -328,17 +333,16 @@ code {
 }
 
 .booking-head {
-    font-size: 5vw;
+    font-size: 7vw;
     color:rgb(65 65 65);
     line-height: 8vw;
-    margin: 1.5vw 0vw;
+    margin: 3vw 0vw;
     font-weight: 600;
 }
 
 
 .cin-cout-container {
-    height: 15vw;
-    width: 75%;
+    width: 80vw;
     margin-bottom: 1.5vw;
     display: flex;
     flex-direction: row;
@@ -353,19 +357,25 @@ code {
     margin: .5vw .5vw;
 }
 
+.cin-cout-wrapper input {
+    width: 38vw;
+    height: 9vw;
+    font-size: 3.5vw;
+}
+
 .min-stay {
-    width: 75%;
-    font-size: 2.3vw;
+    width: 80vw;
+    font-size: 3vw;
     color: #479e9a;
     font-weight: 600;
     line-height: 3vw;
 }
 
 .heading2 {
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: bold;
     color: #414141;
-    line-height: 5vw;
+    line-height: 10vw;
     margin-bottom: 2vw;
 }
 
