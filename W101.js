@@ -60,6 +60,9 @@ function incrementValue(event) {
     var buttonClicked = event.target;
     var value = buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value;
     value++;
+    if (value > 4) {
+        buttonClicked.disabled = true;
+    }
     buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value = value;
     updateTotalCost();    
 }
@@ -69,9 +72,12 @@ function decrementValue(event) {
     var value = buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value;
     value--;
     buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value = value;
+    console.log(value);
     if (value == 0 ) {
         buttonClicked.parentElement.parentElement.parentElement.style.display = 'none';
         buttonClicked.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('select-btn')[0].style.display = 'flex';
+    } else if (value == 4) {
+        buttonClicked.parentElement.parentElement.getElementsByClassName('plus')[0].getElementsByTagName('button')[0].disabled = false;
     }
     updateTotalCost();
 } 

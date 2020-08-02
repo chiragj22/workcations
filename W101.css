@@ -555,12 +555,6 @@ a {
     border-bottom-right-radius: 5px;
 }
 
-.number-btn:disabled {
-    background: #999;
-    color: #ccc;
-    cursor: default;
-}
-
 .number-btn.minus {
     font-size: 4vw;
     border-top-left-radius: 5px;
@@ -575,6 +569,15 @@ a {
 
 .plusminus-sign {
     line-height: 5vw;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #999;
+    color: #ccc;
 }
   
 /*
