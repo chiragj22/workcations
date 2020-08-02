@@ -212,7 +212,7 @@ code {
 
 .section-content h2 {
     margin: 0px;
-    padding: 0px 10px 10px 10px;
+    padding: 3vw 2vw;
 }
 
 .content {
@@ -268,31 +268,22 @@ code {
 .nearby-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 10px;
+    gap: 1.5vw;
 }
 
 .nearby-items {
-    height: 60px;
+    height: 12vw;
     display: flex;
     flex-direction: row;
     border-radius: 2px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
     color: rgb(112, 112, 112);
-    font-size: 0.8em;
-    margin-bottom: 10px;   
-}
-
-.nearby-items.left {
-    margin-right: 3px;
-}
-
-.nearby-items.right {
-    margin-left: 3px;
+    font-size: 3vw;   
 }
 
 .nearby-items img {
-    width: 60px;
+    width: 13vw;
     border-radius: 2px;
 }
 
@@ -307,7 +298,7 @@ code {
     color: #474950;
     font-size: 3.3vw;
     font-weight: bold;
-    margin: 5px 0px 0px 2vw;
+    margin: 1vw 0px 0px 2vw;
 }
 
 .nearby-distance {
@@ -318,7 +309,7 @@ code {
 
 .nearby-distance p {
     padding: 0px 2vw;
-    font-size: 0.9em;
+    font-size: 3vw;
 }
 
 .property-rooms {
