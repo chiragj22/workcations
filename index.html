@@ -254,18 +254,10 @@
                             <label><span class="heading2">Check-In Date</span></label>
                             <input type="date"  id="cinDate" required="Required" name="cinDate" style="width: 143px; height: 31px;"/>
                         </div>
-                        <script>
-                            var today = new Date().toISOString().split('T')[0];
-                            document.getElementsByName("cinDate")[0].setAttribute('min', today);
-                        </script>
                         <div class="cin-cout-wrapper">
                             <label><span class="heading2">Check-Out Date</span></label>
                             <input type="date"  id="coutDate" required="Required" name="cinDate" style="width: 143px; height: 31px;"/>
                         </div>
-                        <script>
-                            var today = new Date().toISOString().split('T')[0];
-                            document.getElementsByName("cinDate")[0].setAttribute('min', today);
-                        </script>
                     </div>
                     <span class="min-stay">*Minimum booking duration is 7 days</span>
                     <div class="line"></div>

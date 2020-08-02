@@ -23,8 +23,18 @@ function ready() {
         var button = minusButtons[i];
         button.addEventListener('click',decrementValue)
     }
+    
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById("cinDate").setAttribute('min', today);
+    document.getElementsByName('cinDate')[0].value = today;
+    document.getElementById('cinDate').addEventListener('change', updateMinCout);
+}
 
-
+function updateMinCout () {
+    var cinDate = new Date(document.getElementById('cinDate').value);
+    var coutDate = new Date(cinDate.getTime()+(7*24*60*60*1000)).toISOString().split('T')[0];
+    console.log(coutDate);
+    document.getElementById("coutDate").setAttribute('min', coutDate);
 }
 
 function addRoom(event) {
