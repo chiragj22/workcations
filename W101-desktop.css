@@ -125,7 +125,7 @@ code {
 .heading {
     color: #414141;
     font-weight: 600;
-    font-size: 1.6em;
+    font-size: 1.7vw;
 }
 
 .gallery-container {
@@ -467,6 +467,24 @@ code {
     color: white;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: solid 1px silver;
+    border-radius: 5px;
+}
+
+.info-object {
+    width: 48vw;
+    font-size: 1.2vw;
+    line-height: 2.5vw;
+    padding-left: 1vw;
+    font-weight: 600;
+    border-bottom: 1px solid #d4d4d4;
 }
 
 .property-rooms {
