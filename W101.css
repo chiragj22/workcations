@@ -67,6 +67,9 @@ code {
     margin-top: 5vw;
     border-top: solid 2px grey;
     border-bottom: solid 2px grey;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 
@@ -183,7 +186,7 @@ code {
     cursor: pointer;
     background-position: center center;
     background-repeat: no-repeat;
-    transition: all 6s ease-in-out 0s;
+    transition: all 3s ease-in-out 0s;
 }
 
 .covidMeasure {
