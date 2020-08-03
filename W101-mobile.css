@@ -5,7 +5,7 @@ html {
 body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
-    font-size: 2vw;
+    font-size: 2.5vw;
     top: 0px;
     left: 0px;
     background: #F5F5F5 0% 0% no-repeat padding-box;
@@ -21,6 +21,26 @@ code {
     box-sizing: border-box;
 }
   
+.homestay {
+    background-color: orangered;
+}
+
+.hostel {
+    background-color: #69d862;
+}
+
+.hotel {
+    background-color: #ea0042;
+}
+
+.resort {
+    background-color: #9449ea;
+}
+
+.villa {
+    background-color: #0089ea;
+}
+
 .slideshow-main-container {
     width: 100%;
 }
@@ -141,7 +161,6 @@ code {
     color: white;
     font-size: 2vw;
     line-height: 3vw;
-    background-color: #62d8d2;
     font-weight: 400;
     padding: 1vw 3vw;
     border-radius: .2em;
@@ -504,8 +523,8 @@ code {
 
 .info-head {
     width: 100%;
-    font-size: 2.5vw;
-    line-height: 4vw;
+    font-size: 3.5vw;
+    line-height: 7vw;
     padding-left: 1vw;
     font-weight: 600;
     border-bottom: 1px solid #d4d4d4;
@@ -523,19 +542,19 @@ code {
 }
 
 .info-arrow {
-    height: 2vw;
+    height: 4vw;
     padding-left: 2vw;
 }
 
 .info-details {
     overflow: hidden;
-    transition: all .5s;
+    transition: all .2s;
 }
 
 .faq-head {
     width: 100%;
-    font-size: 2vw;
-    padding: .7vw 0vw .7vw 1vw;
+    font-size: 3vw;
+    padding: 1.7vw 0vw 1.7vw 1vw;
     font-weight: 600;
     border-bottom: 1px solid #d4d4d4;
     display: flex;
@@ -810,32 +829,6 @@ button:disabled {
     background: #999;
     color: #ccc;
 }
-  
-/*
-  
-.plusminus button:focus {
-    outline: none;
-    color: #2bebaf;
-}
-
-.plusminus button:disabled {
-    background: #999;
-    color: #ccc;
-    cursor: default;
-}
-
-.plusminus button:first-child:before {
-    content: "-";
-}
-
-  .plusminus button:last-child:before {
-    content: "+";
-}
-
-  .plusminus button:last-child:focus {
-    color: #ff6367;
-}
-*/
 
 .plusminus input[type="number"] {
     width: 6vw;
