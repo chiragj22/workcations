@@ -5,7 +5,7 @@ html {
 body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
-    font-size: 14px;
+    font-size: 1vw;
     top: 0px;
     left: 0px;
     background: #F5F5F5 0% 0% no-repeat padding-box;
@@ -30,11 +30,11 @@ code {
     top: 0px;
     height: 5vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     background-color: white;
-    border-bottom: solid 2px green;
+    border-bottom: solid 2px silver;
 }
 
 .cross-box {
@@ -50,15 +50,16 @@ code {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 5vw;
 }
 
 .cross-box img {
-    width: 2.5vw;
+    width: 2vw;
+    margin-right: 3vw;
 }
 
 .slideshow-top span {
     line-height: 2vw;
-    padding: 0px;
 }
 
 .slideshow-container {
@@ -71,8 +72,7 @@ code {
     width: 90vw;
     height: 50vw;
     margin-top: 5vw;
-    border-top: solid 2px grey;
-    border-bottom: solid 2px grey;
+    border: solid 2px grey;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -88,11 +88,6 @@ code {
     width: 100%;
     margin: 0px;
     padding: 25px 10vw;
-}
-
-.page-heading {
-    display: flex;
-    flex-direction: row;
 }
 
 .page-top-container {
@@ -117,7 +112,7 @@ code {
 }
 
 .label {
-    margin: 1vw 0vw 0vw 9vw;
+    margin-top: 1vw;
 }
 
 .label span {
@@ -140,6 +135,7 @@ code {
     color: #414141;
     font-weight: 600;
     font-size: 1.7vw;
+    margin-top: .5vw;
 }
 
 .gallery-container {
@@ -200,6 +196,11 @@ code {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.inc-img {
+    width: 1.7vw;
+    padding-bottom: .5vw;
 }
 
 .covidMeasure {
@@ -274,8 +275,8 @@ code {
 }
 
 .section-content h2 {
-    margin: 0px;
-    padding: 0px 10px 10px 10px;
+    margin-top: 25px;
+    padding: 0px 10px
 }
 
 .content {
@@ -310,7 +311,7 @@ code {
 }
 
 .grid-content img {
-    height: 1em;
+    height: 1.7vw;
     margin-right: 10px;
 }
 
@@ -510,13 +511,13 @@ code {
 }
 
 .info-arrow {
-    height: 1vw;
+    height: 1.3vw;
     padding-left: 2vw;
 }
 
 .info-details {
     overflow: hidden;
-    transition: all .5s;
+    transition: all .2s;
 }
 
 .faq-head {
@@ -536,7 +537,7 @@ code {
     top: 0px;
     height: 50vw;
     width: 24vw;
-    margin-top: 40px;
+    margin-top: 75px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
     border-radius: 5px;
@@ -610,6 +611,7 @@ code {
     flex-direction: column;
     align-items: center;
     overflow: scroll;
+    padding-bottom: 1vw;
 }
 
 .rooms-card {

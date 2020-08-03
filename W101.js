@@ -165,9 +165,9 @@ function openSection (event) {
     buttonClicked.parentElement.getElementsByClassName('close-info')[0].style.display = 'block';
 
     var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
-    section.style.fontSize = '1vw';
-    section.style.height = '14vw';
-    section.style.padding = '1vw 1vw';
+    section.style.fontSize = '1em';
+    section.style.height = '15em';
+    section.style.padding = '1em 1em';
 }
 
 function closeSection (event) {
@@ -177,9 +177,9 @@ function closeSection (event) {
     buttonClicked.parentElement.getElementsByClassName('open-info')[0].style.display = 'block';
 
     var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
-    section.style.fontSize = '0vw';
-    section.style.height = '0px';
-    section.style.padding = '0vw';
+    section.style.fontSize = '0em';
+    section.style.height = '0em';
+    section.style.padding = '0em';
 }
 
 function openFAQ (event) {
@@ -191,9 +191,9 @@ function openFAQ (event) {
     var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
     var value = section.id;
     console.log(value);
-    section.style.fontSize = '1vw';
+    section.style.fontSize = '1em';
     section.style.height = value;
-    section.style.padding = '1vw 1vw';
+    section.style.padding = '1em';
 }
 
 function closeFAQ (event) {
@@ -203,7 +203,7 @@ function closeFAQ (event) {
     buttonClicked.parentElement.getElementsByClassName('open-faq')[0].style.display = 'block';
 
     var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
-    section.style.fontSize = '0vw';
-    section.style.height = '0px';
-    section.style.padding = '0vw';
+    section.style.fontSize = '0em';
+    section.style.height = '0em';
+    section.style.padding = '0em';
 }

@@ -5,7 +5,7 @@ html {
 body {
     margin: 0;
     font-family: "Open Sans", sans-serif;
-    font-size: 14px;
+    font-size: 2vw;
     top: 0px;
     left: 0px;
     background: #F5F5F5 0% 0% no-repeat padding-box;
@@ -34,7 +34,7 @@ code {
     align-items: center;
     justify-content: flex-start;
     background-color: white;
-    border-bottom: solid 2px green;
+    border-bottom: solid 2px silver;
 }
 
 .cross-box {
@@ -53,7 +53,7 @@ code {
 }
 
 .cross-box img {
-    width: 7vw;
+    width: 6vw;
 }
 
 .slideshow-top span {
@@ -76,6 +76,7 @@ code {
 .page-container {
     width: 100%;
     margin: 50px 0px 0px;
+    margin-bottom: 500px;
 }
 
 .page-wrapper {
@@ -332,10 +333,20 @@ code {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5vw;
+    margin-bottom: 2vw;
+}
+
+.nearby-image {
+    height: 12vw;
+    width: 40%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .nearby-items {
-    height: 12vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     border-radius: 2px;
@@ -488,15 +499,49 @@ code {
     background-color: white;
     border: solid 1px silver;
     border-radius: 5px;
+    margin-bottom: 1vw;
 }
 
-.info-object {
+.info-head {
     width: 100%;
     font-size: 2.5vw;
-    line-height: 6vw;
+    line-height: 4vw;
     padding-left: 1vw;
     font-weight: 600;
     border-bottom: 1px solid #d4d4d4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-object {
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info-arrow {
+    height: 2vw;
+    padding-left: 2vw;
+}
+
+.info-details {
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.faq-head {
+    width: 100%;
+    font-size: 2vw;
+    padding: .7vw 0vw .7vw 1vw;
+    font-weight: 600;
+    border-bottom: 1px solid #d4d4d4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .property-rooms {
@@ -735,29 +780,21 @@ a {
 
 .number-btn.minus button{
     font-size: 4vw;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
     -webkit-appearance: none;
 }
 
 .number-btn.plus button{
     font-size: 5vw;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
     -webkit-appearance: none;
 }
 
 .number-btn.minus {
     font-size: 4vw;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
     -webkit-appearance: none;
 }
 
 .number-btn.plus {
     font-size: 5vw;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
     -webkit-appearance: none;
 }
 
