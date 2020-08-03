@@ -90,14 +90,24 @@ code {
     padding: 25px 10vw;
 }
 
+.page-heading {
+    display: flex;
+    flex-direction: row;
+}
+
 .page-top-container {
     display: flex;
     flex-direction: column-reverse;
 }
 
+.property-name-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .property-name {
-    font-weight: 800;
-    font-size: 2.2em;
+    font-weight: 700;
+    font-size: 2.5vw;
     color: #414141;
     display: flex;
     align-items: flex-start;
@@ -106,18 +116,22 @@ code {
     margin: 0px;
 }
 
+.label {
+    margin: 1vw 0vw 0vw 9vw;
+}
+
 .label span {
+    flex: none;
     color: white;
-    font-size: 1em;
+    font-size: 1vw;
     background-color: #62d8d2;
-    margin-left: 1.2em;
-    margin-top: .5em;
     font-weight: 400;
-    padding: .2em 1.2em;
-    border-radius: .2em;
+    padding: .5vw 2vw;
+    border-radius: 5px;
 }
 
 .property-location {
+    font-size: 1.5vw;
     padding: 0px;
     margin: 0px;
 }
@@ -171,7 +185,7 @@ code {
 .inclusions-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     width: 80vw;
     overflow: scroll;
 }
@@ -317,11 +331,21 @@ code {
 .nearby-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 10px;
+    gap: .7vw;
+    margin-bottom: 1vw;
+}
+
+.nearby-image {
+    height: 4vw;
+    width: 30%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .nearby-items {
-    height: 60px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     border-radius: 2px;
@@ -329,20 +353,6 @@ code {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
     color: rgb(112, 112, 112);
     font-size: 0.8em;
-    margin-bottom: 10px;   
-}
-
-.nearby-items.left {
-    margin-right: 3px;
-}
-
-.nearby-items.right {
-    margin-left: 3px;
-}
-
-.nearby-items img {
-    width: 60px;
-    border-radius: 2px;
 }
 
 .nearby-text {
@@ -476,15 +486,49 @@ code {
     background-color: white;
     border: solid 1px silver;
     border-radius: 5px;
+    margin-bottom: 1vw;
 }
 
-.info-object {
-    width: 48vw;
+.info-head {
+    width: 100%;
     font-size: 1.2vw;
     line-height: 2.5vw;
     padding-left: 1vw;
     font-weight: 600;
     border-bottom: 1px solid #d4d4d4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-object {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info-arrow {
+    height: 1vw;
+    padding-left: 2vw;
+}
+
+.info-details {
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.faq-head {
+    width: 100%;
+    font-size: 1vw;
+    padding: .7vw 0vw .7vw 1vw;
+    font-weight: 600;
+    border-bottom: 1px solid #d4d4d4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .property-rooms {

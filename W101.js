@@ -35,6 +35,30 @@ function ready() {
 
     document.getElementById('cinDate').addEventListener('change', updateMinCout);
     document.getElementById('coutDate').addEventListener('change', checkMinCout);
+
+    var info = document.getElementsByClassName('open-info');
+    for (var i = 0; i < info.length; i++) {
+        var button = info[i];
+        button.addEventListener('click', openSection)
+    }
+
+    var info = document.getElementsByClassName('close-info');
+    for (var i = 0; i < info.length; i++) {
+        var button = info[i];
+        button.addEventListener('click', closeSection)
+    }
+
+    var info = document.getElementsByClassName('open-faq');
+    for (var i = 0; i < info.length; i++) {
+        var button = info[i];
+        button.addEventListener('click', openFAQ)
+    }
+
+    var info = document.getElementsByClassName('close-faq');
+    for (var i = 0; i < info.length; i++) {
+        var button = info[i];
+        button.addEventListener('click', closeFAQ)
+    }
 }
 
 function showSlideShow (event) {
@@ -132,4 +156,54 @@ function updateTotalCost() {
     var duration = calcDuration();
     gtotal = total*duration;
     document.getElementsByClassName('costing-value')[0].innerText = '₹' + gtotal;
+}
+
+function openSection (event) {
+    var buttonClicked = event.target;
+    
+    buttonClicked.style.display = 'none';
+    buttonClicked.parentElement.getElementsByClassName('close-info')[0].style.display = 'block';
+
+    var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
+    section.style.fontSize = '1vw';
+    section.style.height = '14vw';
+    section.style.padding = '1vw 1vw';
+}
+
+function closeSection (event) {
+    var buttonClicked = event.target;
+    
+    buttonClicked.style.display = 'none';
+    buttonClicked.parentElement.getElementsByClassName('open-info')[0].style.display = 'block';
+
+    var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
+    section.style.fontSize = '0vw';
+    section.style.height = '0px';
+    section.style.padding = '0vw';
+}
+
+function openFAQ (event) {
+    var buttonClicked = event.target;
+    
+    buttonClicked.style.display = 'none';
+    buttonClicked.parentElement.getElementsByClassName('close-faq')[0].style.display = 'block';
+
+    var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
+    var value = section.id;
+    console.log(value);
+    section.style.fontSize = '1vw';
+    section.style.height = value;
+    section.style.padding = '1vw 1vw';
+}
+
+function closeFAQ (event) {
+    var buttonClicked = event.target;
+    
+    buttonClicked.style.display = 'none';
+    buttonClicked.parentElement.getElementsByClassName('open-faq')[0].style.display = 'block';
+
+    var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
+    section.style.fontSize = '0vw';
+    section.style.height = '0px';
+    section.style.padding = '0vw';
 }

@@ -707,6 +707,7 @@ a {
     border-radius: 5px;
     width: 18vw;
     height: 6vw;
+    -webkit-appearance: none;
 }
 
 .number-btn{
@@ -729,30 +730,35 @@ a {
     align-items: center;
     justify-content: center;
     border: none;
+    -webkit-appearance: none;
 }
 
 .number-btn.minus button{
     font-size: 4vw;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    -webkit-appearance: none;
 }
 
 .number-btn.plus button{
     font-size: 5vw;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    -webkit-appearance: none;
 }
 
 .number-btn.minus {
     font-size: 4vw;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    -webkit-appearance: none;
 }
 
 .number-btn.plus {
     font-size: 5vw;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    -webkit-appearance: none;
 }
 
 .plusminus-sign {
