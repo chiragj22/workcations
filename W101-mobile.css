@@ -177,7 +177,7 @@ code {
 .heading {
     color: #414141;
     font-weight: 600;
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 .gallery-container {
@@ -689,7 +689,7 @@ code {
 }
 
 .room-category {
-    font-size: 4.5vw;
+    font-size: 4vw;
     font-weight: 600;
 }
 
@@ -708,8 +708,12 @@ code {
     font-weight: 600;
 }
 
+.room-sharing img {
+    height: 3vw;
+}
+
 .room-price {
-    font-size: 5.5vw;
+    font-size: 4vw;
     font-weight: 700;
     line-height: 5.5vw;
 }
