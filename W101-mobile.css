@@ -759,11 +759,7 @@ a {
     font-weight: bold;
     text-align: center;
     -moz-appearance: textfield;
-}
-
-.plusminus input[type="number"]::-webkit-outer-spin-button, .plusminus input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin: 0;
 }
 
 .costing-container {
