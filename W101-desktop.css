@@ -218,6 +218,10 @@ code {
     align-items: center;
 }
 
+.inclusion {
+    text-align: center;
+}
+
 .inc-img {
     width: 1.7vw;
     padding-bottom: .5vw;
