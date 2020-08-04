@@ -36,28 +36,10 @@ function ready() {
     document.getElementById('cinDate').addEventListener('change', updateMinCout);
     document.getElementById('coutDate').addEventListener('change', checkMinCout);
 
-    var info = document.getElementsByClassName('open-info');
-    for (var i = 0; i < info.length; i++) {
+    var info = document.getElementsByClassName('section');
+    for (var i = 0; i < info.length ; i++) {
         var button = info[i];
-        button.addEventListener('click', openSection)
-    }
-
-    var info = document.getElementsByClassName('close-info');
-    for (var i = 0; i < info.length; i++) {
-        var button = info[i];
-        button.addEventListener('click', closeSection)
-    }
-
-    var info = document.getElementsByClassName('open-faq');
-    for (var i = 0; i < info.length; i++) {
-        var button = info[i];
-        button.addEventListener('click', openFAQ)
-    }
-
-    var info = document.getElementsByClassName('close-faq');
-    for (var i = 0; i < info.length; i++) {
-        var button = info[i];
-        button.addEventListener('click', closeFAQ)
+        button.addEventListener('click', displayInfo)
     }
 }
 
@@ -121,26 +103,31 @@ function addRoom(event) {
 
 function incrementValue(event) {
     var buttonClicked = event.target;
+    var plusButton = buttonClicked.parentElement.parentElement.getElementsByClassName('plus')[0];
+    if (plusButton.id !== 'disabled') {
     var value = buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value;
     value++;
     if (value > 4) {
-        buttonClicked.disabled = true;
+        plusButton.id = 'disabled';
     }
     buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value = value;
-    updateTotalCost();    
+    updateTotalCost();
+    }
 }
 
 function decrementValue(event) {
     var buttonClicked = event.target;
+    var minusButton = buttonClicked.parentElement.parentElement.getElementsByClassName('minus')[0];
+
     var value = buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value;
     value--;
     buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value = value;
-    console.log(value);
+    
     if (value == 0 ) {
-        buttonClicked.parentElement.parentElement.parentElement.style.display = 'none';
+        buttonClicked.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('select1-btn')[0].style.display = 'none';
         buttonClicked.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('select-btn')[0].style.display = 'flex';
     } else if (value == 4) {
-        buttonClicked.parentElement.parentElement.getElementsByClassName('plus')[0].getElementsByTagName('button')[0].disabled = false;
+        buttonClicked.parentElement.parentElement.getElementsByClassName('plus')[0].id = 'none';
     }
     updateTotalCost();
 } 
@@ -154,56 +141,26 @@ function updateTotalCost() {
     total = total + price*qty;
     }
     var duration = calcDuration();
-    gtotal = total*duration;
-    document.getElementsByClassName('costing-value')[0].innerText = '₹' + gtotal;
+    gTotal = total*duration;
+    document.getElementsByClassName('costing-value')[0].innerText = '₹' + new Intl.NumberFormat('en-IN').format(gTotal);;
 }
 
-function openSection (event) {
-    var buttonClicked = event.target;
+function displayInfo(event) {
+    var buttonClicked = this;
+    var info = buttonClicked.parentElement.getElementsByClassName('info-details')[0];
+    var height = info.style.height;
     
-    buttonClicked.style.display = 'none';
-    buttonClicked.parentElement.getElementsByClassName('close-info')[0].style.display = 'block';
-
-    var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
-    section.style.fontSize = '1em';
-    section.style.height = '15em';
-    section.style.padding = '1em 1em';
-}
-
-function closeSection (event) {
-    var buttonClicked = event.target;
-    
-    buttonClicked.style.display = 'none';
-    buttonClicked.parentElement.getElementsByClassName('open-info')[0].style.display = 'block';
-
-    var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
-    section.style.fontSize = '0em';
-    section.style.height = '0em';
-    section.style.padding = '0em';
-}
-
-function openFAQ (event) {
-    var buttonClicked = event.target;
-    
-    buttonClicked.style.display = 'none';
-    buttonClicked.parentElement.getElementsByClassName('close-faq')[0].style.display = 'block';
-
-    var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
-    var value = section.id;
-    console.log(value);
-    section.style.fontSize = '1em';
-    section.style.height = value;
-    section.style.padding = '1em';
-}
-
-function closeFAQ (event) {
-    var buttonClicked = event.target;
-    
-    buttonClicked.style.display = 'none';
-    buttonClicked.parentElement.getElementsByClassName('open-faq')[0].style.display = 'block';
-
-    var section = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details')[0];
-    section.style.fontSize = '0em';
-    section.style.height = '0em';
-    section.style.padding = '0em';
+    if (height === '0em' ) {
+        buttonClicked.getElementsByClassName('open')[0].style.display = 'none';
+        buttonClicked.getElementsByClassName('close')[0].style.display = 'block';
+        info.style.fontSize = '1em';
+        info.style.height = (info.id);
+        info.style.padding = '1em 1em';
+    } else {
+        buttonClicked.getElementsByClassName('open')[0].style.display = 'block';
+        buttonClicked.getElementsByClassName('close')[0].style.display = 'none';
+        info.style.fontSize = '0em';
+        info.style.height = '0em';
+        info.style.padding = '0em 0em';
+    }
 }

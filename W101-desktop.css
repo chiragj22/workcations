@@ -154,6 +154,7 @@ code {
     color: #414141;
     font-weight: 600;
     font-size: 1.7vw;
+    line-height: 1.8vw;
     margin-top: .5vw;
 }
 
@@ -222,64 +223,6 @@ code {
     padding-bottom: .5vw;
 }
 
-.covidMeasure {
-    padding: 16px 20px;
-    object-fit: contain;
-    border-radius: 4px;
-    border: solid 1px #d4d4d4;
-    background-image: linear-gradient(93deg, #ffffff, #eeeeff);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px 0px;
-}
-
-.covidMeasure__left {
-    display: flex;
-    flex-shrink: 0;
-    border-right: 1px rgba(151, 151, 151, 0.2) solid;
-    padding-right: 30px;
-    margin-right: 30px;
-    align-items: center;
-    position: relative;
-}
-
-.covidMeasure__icon {
-    margin-right: 15px;
-}
-
-.blackText {
-    color: #000000;
-}
-
-.font14 {
-    font-size: 14px;
-    line-height: 14px;
-}
-
-.covidMeasure__middle {
-    flex: 1;
-    display: flex;
-}
-
-.covidMeasure__middle ul {
-    display: flex;
-}
-
-.covidMeasure__middle ul li {
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.covidMeasure__middle ul li > span {
-    margin-right: 8px;
-}
-
-.appendLeft5 {
-    margin-left: 5px;
-}
-
 .page-bottom-container {
     display: flex;
     flex-direction: row;
@@ -294,7 +237,7 @@ code {
 }
 
 .section-content h2 {
-    margin-top: 25px;
+    margin-top: 1.8vw;
     padding: 0px 10px
 }
 
@@ -550,15 +493,25 @@ code {
     align-items: center;
 }
 
+.property-rooms-container {
+    position: sticky;
+    top: 0px;
+    max-height: 95vh;
+    width: 24vw;
+    margin-top: 5vw;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
+    border-radius: 5px;
+}
+
 .property-rooms {
     position: sticky;
     top: 0px;
-    height: 50vw;
+    max-height: 100%;
     width: 24vw;
-    margin-top: 75px;
-    background-color: white;
+    margin-top: 5vw;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
     border-radius: 5px;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -580,10 +533,11 @@ code {
 
 .cin-cout-container {
     height: 3.5vw;
+    width: 100%;
     margin-bottom: 1.5vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -594,6 +548,12 @@ code {
     margin: .5vw .5vw;
     font-size: 1vw;
     line-height: 2vw;
+}
+
+.cin-cout-wrapper input {
+    width: 10vw;
+    height: 2vw;
+    font-size: .9vw;
 }
 
 .min-stay {
@@ -617,10 +577,11 @@ code {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .rooms-container {
-    height: 25vw;
+    max-height: 50vh;
     width: 22vw;
     background-color: #F5F5F5;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
@@ -645,9 +606,9 @@ code {
 }
 
 .rooms-image {
-    height: 4vw;
+    height: 4.2vw;
     width: 6vw;
-    margin: .6vw 0vw 1.3vw .5vw;
+    margin: .4vw 0vw .4vw .5vw;
     overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
@@ -656,7 +617,7 @@ code {
 
 .rooms-details {
     width: 13vw;
-    min-height: 5vw;
+    min-height: 4.7vw;
     margin: .3vw .5vw;
     display: flex;
     flex-direction: column;
@@ -671,7 +632,7 @@ code {
 
 .room-subcategory {
     background-color: white;
-    margin: .6vw 0vw;
+    margin-top: .6vw;
 
 }
 
@@ -685,7 +646,7 @@ code {
 }
 
 .room-sharing img {
-    height: 1vw;
+    height: .8vw;
 }
 
 .room-price {
@@ -704,7 +665,8 @@ code {
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .pupn {
@@ -721,22 +683,19 @@ code {
 
 .select-btn {
     border-radius: 5px;
-    flex-direction: row;
-    justify-content: flex-end;
     overflow: hidden;
+    height: 1.7vw;
 }
 
 .select-btn-object {
     width: 5.1vw;
-    padding: 0.3vw 0;
-    margin: 0vw 0.4vw 0vw 0vw;
-    border-radius: 5px;
+    height: 100%;
     background-color:  #479f9a;;
     color: white;
     font-weight: bold;
     font-size: .95vw;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -747,23 +706,35 @@ a {
 .plusminus {
     display: flex;
     flex-direction: row;
-    margin: 0vw 0.4vw 0.3vw 0vw;
-    font-size: 0;
     border-radius: 5px;
     width: 5.1vw;
     height: 1.7vw;
 }
   
-.plusminus button {
+.number-btn {
     width: 1.7vw;
     height: 1.7vw;
+    background:  #479f9a;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    background:  #479f9a;
+    cursor: pointer;
+}
+
+.number-btn.minus {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.number-btn.plus {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.plusminus span {
     color: #fff;
     font-size: 1.4vw;
-    line-height: 1.5vw;
     border: none;
     font-family: bonds, sans-serif;
     cursor: pointer;
@@ -771,6 +742,11 @@ a {
     -o-transition: color 200ms;
     -webkit-transition: color 200ms;
     transition: color 200ms;
+}
+
+#disabled {
+    background: #999;
+    color: #ccc;
 }
   
 
