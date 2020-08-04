@@ -712,6 +712,8 @@ a {
 .plusminus {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 18vw;
     height: 6vw;
     -webkit-appearance: none;
@@ -726,6 +728,7 @@ a {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    -webkit-appearance: none;
 }
 
 .number-btn.minus {
