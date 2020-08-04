@@ -787,12 +787,14 @@ a {
 
 .number-btn.minus {
     font-size: 4vw;
-    -webkit-appearance: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .number-btn.plus {
     font-size: 5vw;
-    -webkit-appearance: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .plusminus-sign {
