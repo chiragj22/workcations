@@ -19,7 +19,7 @@ code {
 
 .page-container {
     width: 100%;
-    margin: 50px 0px 0px;
+    margin-top: 2vw;
 }
 
 .cover {
@@ -28,6 +28,16 @@ code {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3.3vw;
+    font-weight: 600;
+}
+
+.cover span {
+    margin: 0vw 30vw 0vw 10vw;
 }
 
 .filters-top-container {
@@ -54,10 +64,7 @@ color: rgb(255, 107, 108);
 .filters-container {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     border-radius: 5px;
-    gap: 15px;
     padding: 15px;
 }
 
@@ -146,7 +153,7 @@ color: rgb(255, 107, 108);
     border-color: rgb(255, 107, 108);
     border-image: initial;
     padding: 5px 0px;
-    transition: all 0.4s ease-in-out 0s;
+    /*transition: all 0.4s ease-in-out 0s;*/
     border-radius: 5px 0px 0px 5px;
 }
 
@@ -168,7 +175,7 @@ color: rgb(255, 107, 108);
     border-color: rgba(0, 0, 0, 0);
     border-image: initial;
     padding: 5px 0px;
-    transition: all 0.4s ease-in-out 0s;
+    /*transition: all 0.4s ease-in-out 0s;*/
     border-radius: 5px 0px 0px 5px;
 }
 
@@ -208,8 +215,11 @@ color: rgb(255, 107, 108);
 }
 
 .property-main-image {
-    width: 100%;
-    height: auto;
+    width: 17vw;
+    height: 11vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .property-small-image-container {
@@ -220,6 +230,9 @@ color: rgb(255, 107, 108);
 }
 
 .property-small-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     width: 5.4vw;
     height: 3.6vw;
 }
@@ -234,6 +247,7 @@ color: rgb(255, 107, 108);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-left: 1vw;
 }
 
 .property-details-name {
