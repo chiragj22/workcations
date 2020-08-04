@@ -195,7 +195,7 @@ color: #479e9a;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5vw;
+    -webkit-box-align: center;
 }
 
 .property-container {
@@ -207,6 +207,7 @@ color: #479e9a;
     border-radius: 5px;
     padding: 1vw;
     gap: 1vw;
+    margin-bottom: 5vw;
 }
 
 .property-image-container {
