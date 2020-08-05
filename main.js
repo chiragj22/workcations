@@ -152,13 +152,13 @@ const Properties = [
     },
     {
       slug: "a-resort-in-binsar",
-      title: "Workcations 102 Resort In Binsar",
+      title: "Workcations 102 - Resort In Binsar",
       titleShort: "Resort in Binsar",
       location: "Binsar, Uttarakhand",
       type: "resort",
       about:
         "Located in the Himalayas on top of the Jhandi Dhar hills, Binsar, the property is known for it's exclusive location, valley views and a very warm hospitality. Hotel facilitates rock climbing, rappelling, bird watching, jungle camping, riverside trek and bonfire for an adventurous evening.",
-        features: [
+      features: [
           {
               name: "Well Furnished Rooms", 
               vec: "bed.svg"
@@ -211,7 +211,7 @@ const Properties = [
               name: "Bonfire (On Request)", 
               vec: "camping.svg"
           },
-          ],
+        ],
       inventory: [
         {
           type: "Deluxe Room",
@@ -335,54 +335,93 @@ const Properties = [
         petrolPump: {
           title: "Indian Oil",
           distance: 28.3,
-      }
+        }
       },
     },
     {
       slug: "a-hotel-in-bir",
-      title: "A Hotel in Bir",
+      title: "Workcations 103 - Hotel in Bir",
+      titleShort: "Hotel in Bir",
+      location: "Bir, Himachal Pradesh",
       type: "hotel",
       about:
         "The hotel is located in the village of Bir, which is a base to one of the World's Highest Paragliding Site. Surrounded by plantations and beautiful views of the Dhauladhar Mountains, it provides the perfect spot for a peaceful and rejuvenating stay. One can also explore some natural gems in the nearby mountains like Waterfalls, Cliff sides, River Streams & especially the numerous Monasteries housing Buddhist Monks around the village of Bir",
       features: [
-        "mountain views",
-        "caretaker",
-        "restaurant",
-        "indoor games",
-        "parking",
-        "fireplace",
-        "room service",
-        "balcony/terrace",
-        "bonfire",
-      ],
-      amenities: ["wifi", "homely meals"],
-      inventory: [
         {
-          type: "Deluxe Room",
-          image: "deluxe-bedroom",
-          number: 11,
-          short: [
-            {
-              sharing: "Single Sharing",
-              cost: 1300,
-            },
-            {
-              sharing: "Double Sharing",
-              cost: 1800,
-            },
-          ],
-          long: [
-            {
-              sharing: "Single Sharing",
-              cost: 1200,
-            },
-            {
-              sharing: "Double Sharing",
-              cost: 1700,
-            },
-          ],
+            name: "Well Furnished Rooms", 
+            vec: "bed.svg"
         },
-      ],
+        {
+            name: "WiFi", 
+            vec: "wifi.svg"
+        },
+        {
+            name: "Electricity Backup", 
+            vec: "thunder.svg"
+        },
+        {
+            name: "Regular Sanitisation", 
+            vec: "spray-bottle.svg"
+        },
+        {
+            name: "Daily Meals", 
+            vec: "bowl.svg"
+        },
+        {
+            name: "Mountain Views", 
+            vec: "architecture-and-city.svg"
+        },
+        {
+            name: "Caretaker", 
+            vec: "owner.svg"
+        },
+        {
+            name: "Cafe", 
+            vec: "table.svg"
+        },
+        {
+            name: "Bar", 
+            vec: "valentines-day.svg"
+        },
+        {
+            name: "Parking", 
+            vec: "car-parking.svg"
+        },
+        {
+            name: "Room Service", 
+            vec: "reservation.svg"
+        },
+        {
+            name: "Balcony/Terrace", 
+            vec: "balcony.svg"
+        },
+        {
+            name: "Bonfire (On Request)", 
+            vec: "camping.svg"
+        },
+        ],
+        inventory: [
+            {
+              type: "Deluxe Room",
+              image: "deluxe-bedroom",
+              max: 11,
+              unit: "room",
+              sharing: [
+                {
+                  type: "Single Sharing",
+                  icon: "person",
+                  short: 1300,
+                  long: 1200
+                },
+                {
+                  type: "Double Sharing",
+                  icon: "2person",
+                  short: 1900,
+                  long: 1800
+                }
+              ]
+            }
+          ],
       images: [
         "entry",
         "surroundings",
@@ -394,15 +433,6 @@ const Properties = [
         "family-room",
         "hallway",
       ],
-      location: {
-        city: "Bir",
-        state: "Himachal Pradesh",
-        address:
-          "Hotel Sky Diver, Landing Site, Suja, PO, Bir, Himachal Pradesh 176077",
-        geo: "https://goo.gl/maps/HqjPgPb51mrVGNUi8",
-        iframe:
-          '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13528.262925602963!2d76.7109114!3d32.0404122!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xedae294601aed986!2sHotel%20Sky%20Diver!5e0!3m2!1sen!2sin!4v1595699068940!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
-      },
       inclusions: [
         "Accommodation in Well Furnished Rooms",
         "Electricity Charges",
@@ -417,18 +447,22 @@ const Properties = [
       ],
       nearby: [
         {
+          image: "billing",
           title: "Billing",
           distance: 18,
         },
         {
+          image: "mcleodganj",
           title: "McLeod Ganj",
           distance: 70,
         },
         {
+          image: "parashar",
           title: "Prashar Lake",
           distance: 101,
         },
         {
+          image: "barot",
           title: "Barot Valley",
           distance: 52,
         },
@@ -446,78 +480,115 @@ const Properties = [
           title: "Kangra Central Cooperative Bank ATM",
           distance: 0.6,
         },
+        petrolPump: {
+          title: "Indian Oil",
+          distance: 28.3,
+        }
       },
     },
     {
       slug: "a-resort-in-pauri",
-      title: "A Resort in Pauri",
+      title: "Workcations 101 - Resort in Pauri",
+      titleShort: "Resort in Pauri",
+      location: "Pauri, Uttarakhand",
       type: "resort",
       about:
         "Located at a three and a half hour's drive from Rishikesh, the resort offers striking views of 7 Himalayan Peaks including Trishul, Gangotri, Swargarohini and Neelkanth. Guests can relax and spend some peaceful time in the sit-out facing the view of snow-peaked Himalayas. The in-house 'Spice Walk' restaurant offers local Garhwali and Indian food.",
       features: [
-        "mountain views",
-        "caretaker",
-        "restaurant",
-        "bar",
-        "indoor games",
-        "parking",
-        "fireplace",
-        "room service",
-        "balcony/terrace",
-        "bonfire",
+          {
+              name: "Well Furnished Rooms", 
+              vec: "bed.svg"
+          },
+          {
+              name: "WiFi", 
+              vec: "wifi.svg"
+          },
+          {
+              name: "Electricity Backup", 
+              vec: "thunder.svg"
+          },
+          {
+              name: "Regular Sanitisation", 
+              vec: "spray-bottle.svg"
+          },
+          {
+              name: "Daily Meals", 
+              vec: "bowl.svg"
+          },
+          {
+              name: "Mountain Views", 
+              vec: "architecture-and-city.svg"
+          },
+          {
+              name: "Caretaker", 
+              vec: "owner.svg"
+          },
+          {
+              name: "Cafe", 
+              vec: "table.svg"
+          },
+          {
+              name: "Bar", 
+              vec: "valentines-day.svg"
+          },
+          {
+              name: "Parking", 
+              vec: "car-parking.svg"
+          },
+          {
+              name: "Room Service", 
+              vec: "reservation.svg"
+          },
+          {
+              name: "Balcony/Terrace", 
+              vec: "balcony.svg"
+          },
+          {
+              name: "Bonfire (On Request)", 
+              vec: "camping.svg"
+          },
       ],
-      amenities: ["wifi", "power backup", "homely meals"],
       inventory: [
         {
           type: "Deluxe Room",
           image: "deluxe-bedroom",
-          number: 6,
-          short: [
+          max: 6,
+          unit: "room",
+          sharing: [
             {
-              sharing: "Single Sharing",
-              cost: 1300,
+              type: "Single Sharing",
+              icon: "person",
+              short: 1300,
+              long: 1200
             },
             {
-              sharing: "Double Sharing",
-              cost: 1900,
+              type: "Double Sharing",
+              icon: "2person",
+              short: 1900,
+              long: 1800
             },
-          ],
-          long: [
-            {
-              sharing: "Single Sharing",
-              cost: 1200,
-            },
-            {
-              sharing: "Double Sharing",
-              cost: 1800,
-            },
-          ],
+          ]
         },
         {
           type: "Cottage Room",
           image: "cottage-room",
-          number: 8,
-          short: [
+          max: 8,
+          unit: "room",
+          sharing: [
             {
-              sharing: "Single Sharing",
-              cost: 1800,
+              type: "Single Sharing",
+              icon: "person",
+              short: 1800,
+              long: 1700
             },
             {
-              sharing: "Double Sharing",
-              cost: 2300,
+              type: "Double Sharing",
+              icon: "2person",
+              short: 2300,
+              long: 2200
             },
-          ],
-          long: [
-            {
-              sharing: "Single Sharing",
-              cost: 1700,
-            },
-            {
-              sharing: "Double Sharing",
-              cost: 2200,
-            },
-          ],
-        },
+          ]
+        }
       ],
       images: [
         "cottage-room",
@@ -530,14 +601,6 @@ const Properties = [
         "sunset",
         "view",
       ],
-      location: {
-        city: "Pauri",
-        state: "Uttarakhand",
-        address: "Devprayag - Pauri Road, Pauri, Uttarakhand 246001",
-        geo: "https://goo.gl/maps/j9jneYfKMQ95ywS3A",
-        iframe:
-          '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13798.90845224639!2d78.745071!3d30.159217!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x36b1791881838178!2sMumukshu%20Resort!5e0!3m2!1sen!2sin!4v1595698736354!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
-      },
       inclusions: [
         "Accommodation in Well Furnished Rooms",
         "Electricity Charges",
@@ -552,18 +615,22 @@ const Properties = [
       ],
       nearby: [
         {
+          image: "rishikesh",
           title: "Rishikesh",
           distance: 111,
         },
         {
+          image: "chopta",
           title: "Chopta",
           distance: 131,
         },
         {
+          image: "lansdowne",
           title: "Lansdowne",
           distance: 86,
         },
         {
+          image: "srinagar",
           title: "Srinagar",
           distance: 38,
         },
@@ -581,96 +648,143 @@ const Properties = [
           title: "Bank of India ATM",
           distance: 2.3,
         },
+        petrolPump: {
+          title: "Indian Oil",
+          distance: 1.6,
+        }
       },
     },
     {
       slug: "a-hostel-in-almora",
-      title: "A Hostel In Almora",
+      title: "Workcations 105 - Hostel In Almora",
+      titleShort: "Hostel in Almora",
+      location: "Almora, Uttarakhand",
       type: "hostel",
       about:
         "Surrounded by natural flora and fauna as it overlooks a vast expanse of undulating hills and majestic views of the snow-clad Nandi Devi, Panchchuli, Trishul and Maikatoli peaks, the hostel is spread across 6 luxurious furnished suites, 2 dormitories, vibrant common areas, Bonfire area, In-house multi-cuisine cafe and private open air yoga space. \n\nAdding to the natural lush green surroundings are the lemon, apricot, plum, and walnut trees in the yards! The ridge also homes the Kumaoni people inhabited in rustic villages practicing a unique culture untouched by modernity.",
       features: [
-        "mountain views",
-        "caretaker",
-        "cafe",
-        "restaurant",
-        "bar",
-        "indoor games",
-        "parking",
-        "fireplace",
-        "room service",
-        "balcony/terrace",
-        "bonfire",
-      ],
-      amenities: ["wifi", "power backup", "homely meals"],
+        {
+            name: "Well Furnished Rooms", 
+            vec: "bed.svg"
+        },
+        {
+            name: "WiFi", 
+            vec: "wifi.svg"
+        },
+        {
+            name: "Electricity Backup", 
+            vec: "thunder.svg"
+        },
+        {
+            name: "Regular Sanitisation", 
+            vec: "spray-bottle.svg"
+        },
+        {
+            name: "Daily Meals", 
+            vec: "bowl.svg"
+        },
+        {
+            name: "Mountain Views", 
+            vec: "architecture-and-city.svg"
+        },
+        {
+            name: "Caretaker", 
+            vec: "owner.svg"
+        },
+        {
+            name: "Cafe", 
+            vec: "table.svg"
+        },
+        {
+            name: "Bar", 
+            vec: "valentines-day.svg"
+        },
+        {
+            name: "Parking", 
+            vec: "car-parking.svg"
+        },
+        {
+            name: "Room Service", 
+            vec: "reservation.svg"
+        },
+        {
+            name: "Balcony/Terrace", 
+            vec: "balcony.svg"
+        },
+        {
+            name: "Bonfire (On Request)", 
+            vec: "camping.svg"
+        },
+        ],
       inventory: [
         {
-          type: "Luxury Room",
-          image: "deluxe-room",
-          number: 6,
-          short: [
+          type: "6-Bed Mixed Room",
+          image: "dorm-room",
+          max: 6,
+          unit: "bed",
+          sharing: [
             {
-              sharing: "Single Sharing",
-              cost: 1600,
+              type: "Dorm Bed",
+              icon: "person",
+              short: 800,
+              long: 700
             },
+          ]
+        },
+        {
+          type: "6-Bed Female Room",
+          image: "dorm-room",
+          max: 6,
+          unit: "bed",
+          sharing: [
             {
-              sharing: "Double Sharing",
-              cost: 2100,
+              type: "Dorm Bed",
+              icon: "person",
+              short: 800,
+              long: 700
             },
-          ],
-          long: [
-            {
-              sharing: "Single Sharing",
-              cost: 1500,
-            },
-            {
-              sharing: "Double Sharing",
-              cost: 2000,
-            },
-          ],
+          ]
         },
         {
           type: "Executive Room",
           image: "deluxe-bedroom",
-          number: 2,
-          short: [
+          max: 2,
+          unit: "room",
+          sharing: [
             {
-              sharing: "Single Sharing",
-              cost: 1400,
+              type: "Single Sharing",
+              icon: "person",
+              short: 1400,
+              long: 1300
             },
             {
-              sharing: "Double Sharing",
-              cost: 1800,
+              type: "Double Sharing",
+              icon: "2person",
+              short: 1800,
+              long: 1700
             },
-          ],
-          long: [
-            {
-              sharing: "Single Sharing",
-              cost: 1300,
-            },
-            {
-              sharing: "Double Sharing",
-              cost: 1700,
-            },
-          ],
+          ]
         },
         {
-          type: "6-Bed Dorm",
-          image: "dorm-room",
-          number: 12,
-          short: [
+          type: "Super Deluxe Room",
+          image: "deluxe-room",
+          max: 4,
+          unit: "room",
+          sharing: [
             {
-              sharing: "Single Bed",
-              cost: 800,
+              type: "Single Sharing",
+              icon: "person",
+              short: 1600,
+              long: 1500
             },
-          ],
-          long: [
             {
-              sharing: "Single Bed",
-              cost: 700,
+              type: "Double Sharing",
+              icon: "2person",
+              short: 2100,
+              long: 2000
             },
-          ],
-        },
+          ]
+        }
       ],
       images: [
         "surrounding-view",
@@ -683,15 +797,6 @@ const Properties = [
         "dorm-room",
         "view",
       ],
-      location: {
-        city: "Almora",
-        state: "Uttarkahand",
-        address:
-          "Crank's Ridge Kasaar Devi Temple, Almora-Bageshwar Rd, Almora, Uttarakhand 263601",
-        geo: "https://g.page/Rudra-himalayan-retreat-hostel?share",
-        iframe:
-          '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.6767433377886!2d79.66085541510569!3d29.64213058203048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0b77598446fa1%3A0x85c0dd73436abc78!2sRudra%20Himalayan%20Retreat!5e0!3m2!1sen!2sin!4v1595699155757!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
-      },
       inclusions: [
         "Accommodation in Well Furnished Rooms",
         "Electricity Charges",
@@ -706,18 +811,22 @@ const Properties = [
       ],
       nearby: [
         {
+          image: "almora",
           title: "Almora",
           distance: 8,
         },
         {
+          image: "nainital",
           title: "Nainital",
           distance: 71,
         },
         {
+          image: "mukteshwar",
           title: "Mukteshwar",
           distance: 59,
         },
         {
+          image: "kausani",
           title: "Kausani",
           distance: 57,
         },
@@ -735,6 +844,10 @@ const Properties = [
           title: "State Bank ATM",
           distance: 5.8,
         },
+        petrolPump: {
+          title: "Indian Oil",
+          distance: 6.2,
+        }
       },
     },
 ];
@@ -794,7 +907,7 @@ const Facilities = [
     },
 ];
 
-var s = 1;
+var s = 3;
 
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
@@ -974,22 +1087,24 @@ function ready() {
     carouselNode.className = 'carousel-container';
 
     for (var i = 0; i < Properties.length ; i++) {
+      if (i !== s) {
       var wrapperNode = document.createElement('div');
       wrapperNode.className = 'carousel-wrapper';
       wrapperNode.innerHTML = '<div class="carousel-object"><div class="carousel-object-img" style="background-image: url(https://www.wanderon.in/workcations/' + 
-      Properties[s].slug + '/' + Properties[s].images[0] + '.jpg);"><div class="opacity"><span class="carousel-tag ' + 
-      Properties[s].type + 
+      Properties[i].slug + '/' + Properties[i].images[0] + '.jpg);"><div class="opacity"><span class="carousel-tag ' + 
+      Properties[i].type + 
       '">' + 
-      Properties[s].type +
+      Properties[i].type +
       '</span><span class="carousel-price">' + 
-      Properties[s].inventory[0].sharing[0].long + 
+      Properties[i].inventory[0].sharing[0].long + 
       '<span class="night">/night</span></span></div></div><div class="carousel-object-Details"><span class="carousel-name">' + 
-      Properties[s].titleShort +
+      Properties[i].titleShort +
       '</span><span class="carousel-location">' + 
-      Properties[s].location +
+      Properties[i].location +
       '</span></div><div class="carousel-btn"><span>EXPLORE</span></div></div>';
 
       carouselNode.appendChild(wrapperNode);
+      }
     }
 
     similarNode.appendChild(carouselNode);
@@ -1066,7 +1181,7 @@ function ready() {
         '</span><span class="pupn ml">Per ' + 
         Properties[s].inventory[i].unit + 
         ' per night</span></div><div class="room-qty"><div class="select-btn" style="display: flex;"><span class="select-btn-object">ADD</span></div><div class="select1-btn" style="display: none;"><div class="plusminus"><div class="number-btn minus"><span>&minus;</span></div><input class="productQty" type="number" id="productQty" value="0" min="1" max="' +
-        Properties[s].inventory[i].sharing[j].max + 
+        Properties[s].inventory[i].max + 
         '" readonly><div class="number-btn plus"><span>&plus;</span></div></div></div></div></div>';
         detailsNode.appendChild(sharingNode);
       }
@@ -1226,7 +1341,8 @@ function incrementValue(event) {
     if (plusButton.id !== 'disabled') {
     var value = buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value;
     value++;
-    if (value > 4) {
+    var max = buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].max;
+    if (value == max) {
         plusButton.id = 'disabled';
     }
     buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value = value;
@@ -1241,11 +1357,12 @@ function decrementValue(event) {
     var value = buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value;
     value--;
     buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value = value;
+    var max = buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].max;
     
     if (value == 0 ) {
         buttonClicked.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('select1-btn')[0].style.display = 'none';
         buttonClicked.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('select-btn')[0].style.display = 'flex';
-    } else if (value == 4) {
+    } else if (value == (max-1)) {
         buttonClicked.parentElement.parentElement.getElementsByClassName('plus')[0].id = 'none';
     }
     updateTotalCost();
