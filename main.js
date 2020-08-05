@@ -1,7 +1,7 @@
 const Properties = [
     {
       slug: "an-apartment-in-mussoorie",
-      title: "Workcations 101 - Apartment in Mussoorie",
+      title: "Workcations 104 - Apartment in Mussoorie",
       titleShort: "Apartment in Mussoorie",
       location: "Mussoorie, Uttarakhand",
       type: "apartment",
@@ -152,89 +152,119 @@ const Properties = [
     },
     {
       slug: "a-resort-in-binsar",
-      title: "A Resort In Binsar",
+      title: "Workcations 102 Resort In Binsar",
+      titleShort: "Resort in Binsar",
+      location: "Binsar, Uttarakhand",
       type: "resort",
       about:
         "Located in the Himalayas on top of the Jhandi Dhar hills, Binsar, the property is known for it's exclusive location, valley views and a very warm hospitality. Hotel facilitates rock climbing, rappelling, bird watching, jungle camping, riverside trek and bonfire for an adventurous evening.",
-      features: [
-        "mountain views",
-        "caretaker",
-        "restaurant",
-        "indoor games",
-        "parking",
-        "fireplace",
-        "room service",
-        "balcony/terrace",
-        "bonfire",
-      ],
-      amenities: ["wifi", "power backup", "homely meals"],
+        features: [
+          {
+              name: "Well Furnished Rooms", 
+              vec: "bed.svg"
+          },
+          {
+              name: "WiFi", 
+              vec: "wifi.svg"
+          },
+          {
+              name: "Electricity Backup", 
+              vec: "thunder.svg"
+          },
+          {
+              name: "Regular Sanitisation", 
+              vec: "spray-bottle.svg"
+          },
+          {
+              name: "Daily Meals", 
+              vec: "bowl.svg"
+          },
+          {
+              name: "Mountain Views", 
+              vec: "architecture-and-city.svg"
+          },
+          {
+              name: "Caretaker", 
+              vec: "owner.svg"
+          },
+          {
+              name: "Cafe", 
+              vec: "table.svg"
+          },
+          {
+              name: "Bar", 
+              vec: "valentines-day.svg"
+          },
+          {
+              name: "Parking", 
+              vec: "car-parking.svg"
+          },
+          {
+              name: "Room Service", 
+              vec: "reservation.svg"
+          },
+          {
+              name: "Balcony/Terrace", 
+              vec: "balcony.svg"
+          },
+          {
+              name: "Bonfire (On Request)", 
+              vec: "camping.svg"
+          },
+          ],
       inventory: [
         {
-          type: "Standard Room",
+          type: "Deluxe Room",
           image: "deluxe-bedroom",
-          number: 18,
-          short: [
+          max: 18,
+          unit: "room",
+          sharing: [
             {
-              sharing: "Single Sharing",
-              cost: 1300,
+              type: "Single Sharing",
+              icon: "person",
+              short: 1300,
+              long: 1200
             },
             {
-              sharing: "Double Sharing",
-              cost: 1900,
+              type: "Double Sharing",
+              icon: "2person",
+              short: 1900,
+              long: 1800
             },
             {
-              sharing: "Triple Sharing",
-              cost: 2500,
-            },
-          ],
-          long: [
-            {
-              sharing: "Single Sharing",
-              cost: 1200,
-            },
-            {
-              sharing: "Double Sharing",
-              cost: 1800,
-            },
-            {
-              sharing: "Triple Sharing",
-              cost: 2400,
-            },
-          ],
+              type: "Triple Sharing",
+              icon: "3person",
+              short: 2500,
+              long: 2400
+            }
+          ]
         },
         {
           type: "Ecological Room",
-          image: "ecological-bedroom-view",
-          number: 9,
-          short: [
+          image: "ecological-bedroom",
+          max: 9,
+          unit: "room",
+          sharing: [
             {
-              sharing: "Single Sharing",
-              cost: 1500,
+              type: "Single Sharing",
+              icon: "person",
+              short: 1500,
+              long: 1350
             },
             {
-              sharing: "Double Sharing",
-              cost: 2100,
+              type: "Double Sharing",
+              icon: "2person",
+              short: 2100,
+              long: 2000
             },
             {
-              sharing: "Triple Sharing",
-              cost: 2700,
-            },
-          ],
-          long: [
-            {
-              sharing: "Single Sharing",
-              cost: 1350,
-            },
-            {
-              sharing: "Double Sharing",
-              cost: 2000,
-            },
-            {
-              sharing: "Triple Sharing",
-              cost: 2600,
-            },
-          ],
-        },
+              type: "Triple Sharing",
+              icon: "3person",
+              short: 2700,
+              long: 2600
+            }
+          ]
+        }
       ],
       images: [
         "outside-sitting-area",
@@ -254,14 +284,7 @@ const Properties = [
         "surroundings",
         "surroundings-snow",
       ],
-      location: {
-        city: "Binsar",
-        state: "Uttarakhand",
-        address: "Jageshwar Rd, Om-Nagar, Dhaulchhina, Uttarakhand 263624",
-        geo: "https://goo.gl/maps/KTscyrAPtdgbZq746",
-        iframe:
-          '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.5931053674976!2d79.78564211510644!3d29.67357958201874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a0cbd5a992b719%3A0x72e25d20266431bc!2sBinsar%20Eco%20Camp!5e0!3m2!1sen!2sin!4v1595698974529!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
-      },
+      
       inclusions: [
         "Accommodation in Well Furnished Rooms",
         "Electricity Charges",
@@ -276,19 +299,23 @@ const Properties = [
       ],
       nearby: [
         {
+          image: "almora",
           title: "Almora",
           distance: 33,
         },
         {
+          image: "nainital",
           title: "Nainital",
           distance: 96,
         },
         {
+          image: "mukteshwar",
           title: "Mukteshwar",
           distance: 85,
         },
         {
-          title: "Munsyari",
+          image: "munsiyari",
+          title: "Munsiyari",
           distance: 166,
         },
       ],
@@ -305,6 +332,10 @@ const Properties = [
           title: "State Bank ATM",
           distance: 0.7,
         },
+        petrolPump: {
+          title: "Indian Oil",
+          distance: 28.3,
+      }
       },
     },
     {
@@ -763,7 +794,7 @@ const Facilities = [
     },
 ];
 
-var s = 0;
+var s = 1;
 
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
@@ -942,7 +973,6 @@ function ready() {
     var carouselNode = document.createElement('div');
     carouselNode.className = 'carousel-container';
 
-    //similarNode.innerHTML = '<h2 class="heading">Similar Properties</h2><div class="carousel-container"><div class="carousel-wrapper"><div class="carousel-object"><div class="carousel-object-img" style="background-image: url(MumukshuResorts-Property2.jpg);"><div class="opacity"><span class="carousel-tag resort">Resort</span><span class="carousel-price">1200<span class="night">/night</span></span></div></div><div class="carousel-object-Details"><span class="carousel-name">Resort In Pauri</span><span class="carousel-location">Pauri Garhwal, Uttarkahand</span></div><div class="carousel-btn"><span>EXPLORE</span></div></div></div><div class="carousel-wrapper"><div class="carousel-object"><div class="carousel-object-img" style="background-image: url(HotelSkyDiver-Property7.jpg);"><div class="opacity"><span class="carousel-tag hotel">Hotel</span><span class="carousel-price">1200<span class="night">/night</span></span></div></div><div class="carousel-object-Details"><span class="carousel-name">Hotel in Bir</span><span class="carousel-location">Bir, Himachal Pradesh</span></div><div class="carousel-btn"><span>EXPLORE</span></div></div></div><div class="carousel-wrapper"><div class="carousel-object"><div class="carousel-object-img" style="background-image: url(AHouseInTheHills-Property13.jpg);"><div class="opacity"><span class="carousel-tag villa">Villa</span><span class="carousel-price">1700<span class="night">/night</span></span></div></div><div class="carousel-object-Details"><span class="carousel-name">Villa In Mussoorie</span><span class="carousel-location">Mussoorie, Uttarkahand</span></div><div class="carousel-btn"><span>EXPLORE</span></div></div></div></div>';
     for (var i = 0; i < Properties.length ; i++) {
       var wrapperNode = document.createElement('div');
       wrapperNode.className = 'carousel-wrapper';
@@ -1010,11 +1040,11 @@ function ready() {
     roomsContainerNode.className = 'rooms-container';
     for (var i = 0; i < Properties[s].inventory.length; i++) {
       var roomCard = document.createElement('div');
-      roomsContainerNode.className = 'rooms-card';
+      roomCard.className = 'rooms-card';
       var imgNode = document.createElement('div');
       imgNode.className = 'rooms-image';
       imgNode.style.backgroundImage = 'url(https://www.wanderon.in/workcations/' + Properties[s].slug + '/' + Properties[s].inventory[i].image + '.jpg;)';
-      roomsContainerNode.appendChild(imgNode);
+      roomCard.appendChild(imgNode);
 
       var detailsNode = document.createElement('div');
       detailsNode.className = 'rooms-details';
@@ -1040,8 +1070,8 @@ function ready() {
         '" readonly><div class="number-btn plus"><span>&plus;</span></div></div></div></div></div>';
         detailsNode.appendChild(sharingNode);
       }
-
-      roomsContainerNode.appendChild(detailsNode);
+      roomCard.appendChild(detailsNode);
+      roomsContainerNode.appendChild(roomCard);
     }
 
     flexNode.appendChild(roomsContainerNode);
