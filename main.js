@@ -2,6 +2,7 @@ const Properties = [
     {
       slug: "an-apartment-in-mussoorie",
       title: "Workcations 101 - Apartment in Mussoorie",
+      titleShort: "Apartment in Mussoorie",
       location: "Mussoorie, Uttarakhand",
       type: "apartment",
       about:
@@ -64,17 +65,14 @@ const Properties = [
         {
           type: "2 BHK Apartment",
           image: "2bhk-bedroom",
-          number: 4,
-          short: [
+          max: 4,
+          unit: "unit",
+          sharing: [
             {
-              sharing: "Entire Apartment",
-              cost: 1900,
-            },
-          ],
-          long: [
-            {
-              sharing: "Entire Apartment",
-              cost: 1700,
+            type: "Entire Apartment",
+            icon: "apartment",
+            short: 1900,
+            long: 1700
             },
           ],
         },
@@ -113,18 +111,22 @@ const Properties = [
       ],
       nearby: [
         {
+          image: "dhanaulti",
           title: "Dhanaulti",
           distance: 33,
         },
         {
+          image: "kanatal",
           title: "Kanatal",
           distance: 50,
         },
         {
+          image: "chakrata",
           title: "Chakrata",
           distance: 83,
         },
         {
+          image: "rishikesh",
           title: "Rishikesh",
           distance: 80,
         },
@@ -761,15 +763,17 @@ const Facilities = [
     },
 ];
 
+var s = 0;
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
     ready()
 }
 
-function ready() {
 
-    var s = 0;
+
+function ready() {
 
     //set page title
     document.title = Properties[s].title;
@@ -842,7 +846,7 @@ function ready() {
     var newImg = document.createElement('div');
     newImg.className = 'main-image';
     newImg.style.backgroundImage = 'linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://www.wanderon.in/workcations/' + Properties[s].slug + '/' + Properties[s].images[4] + '.jpg;)'
-    newImg.innerHTML = '+ 4 Photos';
+    newImg.innerHTML = '+ ' + (Properties[s].images.length-3) + ' Photos';
     newNode.appendChild(newImg);
     galleryNode.appendChild(newNode);
 
@@ -880,7 +884,7 @@ function ready() {
 
     propertyDetailsNode.appendChild(aboutNode);
 
-
+    //add essentials
     var essentialsNode = document.createElement('div');
     essentialsNode.className = 'section-content about';
     essentialsNode.innerHTML = '<h2 class="heading">Essential Services</h2><div class="content"><div class="essentials-container"><div class="essentials-content"><span class="grid-content width50"><img src="medical.svg" alt="Medical Centre">Medical Centre</span><p>-----</p><p>' +
@@ -895,30 +899,30 @@ function ready() {
 
     propertyDetailsNode.appendChild(essentialsNode);
 
-
+    //add nearby
     var nearbyNode = document.createElement('div');
     nearbyNode.className = 'section-content';
     nearbyNode.innerHTML = '<h2 class="heading">Nearby Attractions</h2><div class="nearby-container"><div class="nearby-items"><div class="nearby-image" style="background-image: url(' + 
-    //photo.jpg + 
-    ');"></div><div class="nearby-text"><span class="nearby-name">' + 
+    Properties[s].nearby[0].image + 
+    '.jpg);"></div><div class="nearby-text"><span class="nearby-name">' + 
     Properties[s].nearby[0].title + 
     '</span><div class="nearby-distance"><p>Distance</p><p>' + 
     Properties[s].nearby[0].distance + 
     ' Km</p></div></div></div><div class="nearby-items"><div class="nearby-image" style="background-image: url(' + 
-    //photo.jpeg + 
-    ');"></div><div class="nearby-text"><span class="nearby-name">' + 
+    Properties[s].nearby[1].image +
+    '.jpg);"></div><div class="nearby-text"><span class="nearby-name">' + 
     Properties[s].nearby[1].title + 
     '</span><div class="nearby-distance"><p>Distance</p><p>' + 
     Properties[s].nearby[1].distance + 
     ' Km</p></div></div></div><div class="nearby-items"><div class="nearby-image" style="background-image: url(' + 
-    //photo.jpg + 
-    ');"></div><div class="nearby-text"><span class="nearby-name">' + 
+    Properties[s].nearby[2].image +
+    '.jpg);"></div><div class="nearby-text"><span class="nearby-name">' + 
     Properties[s].nearby[2].title + 
     '</span><div class="nearby-distance"><p>Distance</p><p>' + 
     Properties[s].nearby[2].distance + 
     ' Km</p></div></div></div><div class="nearby-items"><div class="nearby-image" style="background-image: url(' + 
-    //photo.jpg + 
-    ');"></div><div class="nearby-text"><span class="nearby-name">' + 
+    Properties[s].nearby[3].image +
+    '.jpg);"></div><div class="nearby-text"><span class="nearby-name">' + 
     Properties[s].nearby[3].title + 
     '</span><div class="nearby-distance"><p>Distance</p><p>' + 
     Properties[s].nearby[3].distance + 
@@ -926,14 +930,43 @@ function ready() {
 
     propertyDetailsNode.appendChild(nearbyNode);
 
-
+    //add similar properties carousel
     var similarNode = document.createElement('div');
     similarNode.className = 'section-content';
-    similarNode.innerHTML = '<h2 class="heading">Similar Properties</h2><div class="carousel-container"><div class="carousel-wrapper"><div class="carousel-object"><div class="carousel-object-img" style="background-image: url(MumukshuResorts-Property2.jpg);"><div class="opacity"><span class="carousel-tag resort">Resort</span><span class="carousel-price">1200<span class="night">/night</span></span></div></div><div class="carousel-object-Details"><span class="carousel-name">Resort In Pauri</span><span class="carousel-location">Pauri Garhwal, Uttarkahand</span></div><div class="carousel-btn"><span>EXPLORE</span></div></div></div><div class="carousel-wrapper"><div class="carousel-object"><div class="carousel-object-img" style="background-image: url(HotelSkyDiver-Property7.jpg);"><div class="opacity"><span class="carousel-tag hotel">Hotel</span><span class="carousel-price">1200<span class="night">/night</span></span></div></div><div class="carousel-object-Details"><span class="carousel-name">Hotel in Bir</span><span class="carousel-location">Bir, Himachal Pradesh</span></div><div class="carousel-btn"><span>EXPLORE</span></div></div></div><div class="carousel-wrapper"><div class="carousel-object"><div class="carousel-object-img" style="background-image: url(AHouseInTheHills-Property13.jpg);"><div class="opacity"><span class="carousel-tag villa">Villa</span><span class="carousel-price">1700<span class="night">/night</span></span></div></div><div class="carousel-object-Details"><span class="carousel-name">Villa In Mussoorie</span><span class="carousel-location">Mussoorie, Uttarkahand</span></div><div class="carousel-btn"><span>EXPLORE</span></div></div></div></div>';
+    
+    var heading = document.createElement('h2');
+    heading.className = 'heading';
+    heading.innerHTML = 'Similar Properties';
+    similarNode.appendChild(heading);
+
+    var carouselNode = document.createElement('div');
+    carouselNode.className = 'carousel-container';
+
+    //similarNode.innerHTML = '<h2 class="heading">Similar Properties</h2><div class="carousel-container"><div class="carousel-wrapper"><div class="carousel-object"><div class="carousel-object-img" style="background-image: url(MumukshuResorts-Property2.jpg);"><div class="opacity"><span class="carousel-tag resort">Resort</span><span class="carousel-price">1200<span class="night">/night</span></span></div></div><div class="carousel-object-Details"><span class="carousel-name">Resort In Pauri</span><span class="carousel-location">Pauri Garhwal, Uttarkahand</span></div><div class="carousel-btn"><span>EXPLORE</span></div></div></div><div class="carousel-wrapper"><div class="carousel-object"><div class="carousel-object-img" style="background-image: url(HotelSkyDiver-Property7.jpg);"><div class="opacity"><span class="carousel-tag hotel">Hotel</span><span class="carousel-price">1200<span class="night">/night</span></span></div></div><div class="carousel-object-Details"><span class="carousel-name">Hotel in Bir</span><span class="carousel-location">Bir, Himachal Pradesh</span></div><div class="carousel-btn"><span>EXPLORE</span></div></div></div><div class="carousel-wrapper"><div class="carousel-object"><div class="carousel-object-img" style="background-image: url(AHouseInTheHills-Property13.jpg);"><div class="opacity"><span class="carousel-tag villa">Villa</span><span class="carousel-price">1700<span class="night">/night</span></span></div></div><div class="carousel-object-Details"><span class="carousel-name">Villa In Mussoorie</span><span class="carousel-location">Mussoorie, Uttarkahand</span></div><div class="carousel-btn"><span>EXPLORE</span></div></div></div></div>';
+    for (var i = 0; i < Properties.length ; i++) {
+      var wrapperNode = document.createElement('div');
+      wrapperNode.className = 'carousel-wrapper';
+      wrapperNode.innerHTML = '<div class="carousel-object"><div class="carousel-object-img" style="background-image: url(https://www.wanderon.in/workcations/' + 
+      Properties[s].slug + '/' + Properties[s].images[0] + '.jpg);"><div class="opacity"><span class="carousel-tag ' + 
+      Properties[s].type + 
+      '">' + 
+      Properties[s].type +
+      '</span><span class="carousel-price">' + 
+      Properties[s].inventory[0].sharing[0].long + 
+      '<span class="night">/night</span></span></div></div><div class="carousel-object-Details"><span class="carousel-name">' + 
+      Properties[s].titleShort +
+      '</span><span class="carousel-location">' + 
+      Properties[s].location +
+      '</span></div><div class="carousel-btn"><span>EXPLORE</span></div></div>';
+
+      carouselNode.appendChild(wrapperNode);
+    }
+
+    similarNode.appendChild(carouselNode);
 
     propertyDetailsNode.appendChild(similarNode);
 
-
+    //add Guidelines section
     var infoNode = document.createElement('div');
     infoNode.className = 'section-content';
     infoNode.innerHTML = '<h2 class="heading">Important Information</h2><div class="info-container"><div class="info-object"><div class="section info-head"> <span class="info-name">Guidelines for Travellers</span> <img class="info-arrow open open-info" src="plus.svg" alt="" style="display: block;"> <img class="info-arrow close close-info" src="minus.svg" alt="" style="display: none;"></div><div class="info-details" style="font-size: 0vw; transition-property: height; height: 0em;" id="15em"><p>1. Mandatory to carry ICMR approved COVID-19 RT-PCR negative report.</p><p>2. Carry the hard copy of E-permit of the concerned state to which you are travelling.</p><p>3. You would be asked to undergo 14-days quarantine period in hotel room on your arrival.</p><p>4. Carry a valid Govt Id along with your address proof( Passport, Aadhar card, Driving Liscence, Voter ID or any other valid ID).</p><p>5. Download Aarogya Setu application on your mobile device.</p><p>6. Carry hand sanitizer, N-95 mask and hand gloves.</p><p>7. We recommend you to travel with a PPE kit.</p></div></div><div class="info-object"><div class="section info-head"> <span class="info-name">Practices By WanderOn</span> <img class="info-arrow open open-info" src="plus.svg" alt="" style="display: block;"> <img class="info-arrow close close-info" src="minus.svg" alt="" style="display: none;"></div><div class="info-details" style="font-size: 0vw; transition-property: height; height: 0em;" id="15em"><p>1. All the properties would be following the SOPs and guidelines as dictated by WHO to ensure a safe and hygienic stay.</p><p>2. Contactless Check-In.</p><p>3. Regular sanitization of the property covering all the touch-points and common areas.</p><p>4. Your room/dorm would be sanitized twice a week.</p><p>5. During the set period of quarantine, food would be served inside your room in disposables/personal utensils.</p><p>6. As you won’t be allowed to step out of the property premises during the quarantine period, all your requirements would be assisted by the team.</p></div></div><div class="info-object"><div class="section info-head"> <span class="info-name">Terms & Conditions</span> <img class="info-arrow open open-info" src="plus.svg" alt="" style="display: block;"> <img class="info-arrow close close-info" src="minus.svg" alt="" style="display: none;"></div><div class="info-details" style="font-size: 0vw; transition-property: height; height: 0em;" id="15em"><p>1. We expect you to strictly adhere to the above guidelines for your own safety and for the safety of others.</p><p>2. Submission of fake COVID-19 RT-PCR negative report or fake E-permit might result in legal action being taken under the NATIONAL DISASTER MANAGEMENT ACT and the company won’t bear any responsibility for the same.</p><p>3. Please follow this link to check out all the authorised ICMR approved private and government labs in Delhi-NCR.</p></div></div></div>';
@@ -975,7 +1008,41 @@ function ready() {
     
     var roomsContainerNode = document.createElement('div');
     roomsContainerNode.className = 'rooms-container';
-    roomsContainerNode.innerHTML = 
+    for (var i = 0; i < Properties[s].inventory.length; i++) {
+      var roomCard = document.createElement('div');
+      roomsContainerNode.className = 'rooms-card';
+      var imgNode = document.createElement('div');
+      imgNode.className = 'rooms-image';
+      imgNode.style.backgroundImage = 'url(https://www.wanderon.in/workcations/' + Properties[s].slug + '/' + Properties[s].inventory[i].image + '.jpg;)';
+      roomsContainerNode.appendChild(imgNode);
+
+      var detailsNode = document.createElement('div');
+      detailsNode.className = 'rooms-details';
+      
+      var newSpan = document.createElement('span');
+      newSpan.className = 'room-category ml';
+      newSpan.innerHTML = Properties[s].inventory[i].type;
+      detailsNode.appendChild(newSpan);
+
+      for (var j = 0; j < Properties[s].inventory[i].sharing.length; j++) {
+        var sharingNode = document.createElement('div');
+        sharingNode.className = 'room-subcategory';
+        sharingNode.innerHTML = '<div class="room-sharing ml"><img class="sharing-icon"src="' +
+        Properties[s].inventory[i].sharing[j].icon + 
+        '.svg"><span class="ml">' +
+        Properties[s].inventory[i].sharing[j].type + 
+        '</span></div><div class="room-qty-container"><div class="room-price-container"><span class="room-price ml">₹' + 
+        Properties[s].inventory[i].sharing[j].short + 
+        '</span><span class="pupn ml">Per ' + 
+        Properties[s].inventory[i].unit + 
+        ' per night</span></div><div class="room-qty"><div class="select-btn" style="display: flex;"><span class="select-btn-object">ADD</span></div><div class="select1-btn" style="display: none;"><div class="plusminus"><div class="number-btn minus"><span>&minus;</span></div><input class="productQty" type="number" id="productQty" value="0" min="1" max="' +
+        Properties[s].inventory[i].sharing[j].max + 
+        '" readonly><div class="number-btn plus"><span>&plus;</span></div></div></div></div></div>';
+        detailsNode.appendChild(sharingNode);
+      }
+
+      roomsContainerNode.appendChild(detailsNode);
+    }
 
     flexNode.appendChild(roomsContainerNode);
 
@@ -1082,6 +1149,7 @@ function checkMinCout () {
     if (d < 7) {
         updateMinCout();
     } else {
+        updateRoomCost();
         updateTotalCost();
     }
 }
@@ -1093,10 +1161,30 @@ function calcDuration () {
     return duration;
 }
 
+function updateRoomCost() {
+  var duration = calcDuration();
+  var roomsCard = document.getElementsByClassName('rooms-card');
+  if (duration > 14) {
+    for (var i = 0; i < Properties[s].inventory.length; i++) {
+      var sharingCard = roomsCard[i].getElementsByClassName('room-subcategory');
+      for (var j = 0; j < Properties[s].inventory[i].sharing.length; j++) {
+        sharingCard[j].getElementsByClassName('room-price ml')[0].innerHTML = Properties[s].inventory[i].sharing[j].long;
+      }
+    }
+  } else {
+    for (var i = 0; i < Properties[s].inventory.length; i++) {
+      var sharingCard = roomsCard[i].getElementsByClassName('room-subcategory');
+      for (var j = 0; j < Properties[s].inventory[i].sharing.length; j++) {
+        sharingCard[j].getElementsByClassName('room-price ml')[0].innerHTML = Properties[s].inventory[i].sharing[j].short;
+      }
+    }
+  }
+} 
+
 function addRoom(event) {
     var buttonClicked = event.target;
-    buttonClicked.slideshow.style.display = 'none';
-    var addButton = buttonClicked.slideshow.slideshow.getElementsByClassName('select1-btn')[0];
+    buttonClicked.parentElement.style.display = 'none';
+    var addButton = buttonClicked.parentElement.parentElement.getElementsByClassName('select1-btn')[0];
     addButton.style.display = 'flex';
     addButton.getElementsByClassName('productQty')[0].value = 1;
     updateTotalCost();
@@ -1104,31 +1192,31 @@ function addRoom(event) {
 
 function incrementValue(event) {
     var buttonClicked = event.target;
-    var plusButton = buttonClicked.slideshow.slideshow.getElementsByClassName('plus')[0];
+    var plusButton = buttonClicked.parentElement.parentElement.getElementsByClassName('plus')[0];
     if (plusButton.id !== 'disabled') {
-    var value = buttonClicked.slideshow.slideshow.getElementsByClassName('productQty')[0].value;
+    var value = buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value;
     value++;
     if (value > 4) {
         plusButton.id = 'disabled';
     }
-    buttonClicked.slideshow.slideshow.getElementsByClassName('productQty')[0].value = value;
+    buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value = value;
     updateTotalCost();
     }
 }
 
 function decrementValue(event) {
     var buttonClicked = event.target;
-    var minusButton = buttonClicked.slideshow.slideshow.getElementsByClassName('minus')[0];
+    var minusButton = buttonClicked.parentElement.parentElement.getElementsByClassName('minus')[0];
 
-    var value = buttonClicked.slideshow.slideshow.getElementsByClassName('productQty')[0].value;
+    var value = buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value;
     value--;
-    buttonClicked.slideshow.slideshow.getElementsByClassName('productQty')[0].value = value;
+    buttonClicked.parentElement.parentElement.getElementsByClassName('productQty')[0].value = value;
     
     if (value == 0 ) {
-        buttonClicked.slideshow.slideshow.slideshow.slideshow.getElementsByClassName('select1-btn')[0].style.display = 'none';
-        buttonClicked.slideshow.slideshow.slideshow.slideshow.getElementsByClassName('select-btn')[0].style.display = 'flex';
+        buttonClicked.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('select1-btn')[0].style.display = 'none';
+        buttonClicked.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('select-btn')[0].style.display = 'flex';
     } else if (value == 4) {
-        buttonClicked.slideshow.slideshow.getElementsByClassName('plus')[0].id = 'none';
+        buttonClicked.parentElement.parentElement.getElementsByClassName('plus')[0].id = 'none';
     }
     updateTotalCost();
 } 
@@ -1154,6 +1242,17 @@ function displayInfo(event) {
     if (height === '0em' ) {
         buttonClicked.getElementsByClassName('open')[0].style.display = 'none';
         buttonClicked.getElementsByClassName('close')[0].style.display = 'block';
+
+        //close any open element
+        var closeElement = buttonClicked.parentElement.parentElement.getElementsByClassName('info-details open')[0];
+        if (closeElement) {
+          closeElement.style.fontSize = '0em';
+          closeElement.style.height = '0em';
+          closeElement.style.padding = '0em 0em';
+          closeElement.className = "info-details";
+        }
+
+        info.className = "info-details open";
         info.style.fontSize = '1em';
         info.style.height = (info.id);
         info.style.padding = '1em 1em';

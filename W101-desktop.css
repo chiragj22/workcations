@@ -41,6 +41,10 @@ code {
     background-color: #0089ea;
 }
 
+.apartment {
+    background-color: #0089ea;
+}
+
 .slideshow-main-container {
     width: 100%;
 }
@@ -351,6 +355,7 @@ code {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    overflow: scroll;
     margin-bottom: 1vw;
 }
 
@@ -360,6 +365,7 @@ code {
     align-items: center;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    margin-right: .5vw;
     box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
 }
 
@@ -401,6 +407,7 @@ code {
 }
 
 .carousel-tag {
+    text-transform: capitalize;
     color: white;
     font-size: 1vw;
     font-weight: 600;
@@ -418,7 +425,7 @@ code {
 }
 
 .carousel-name {
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     font-weight: 600;
     color: #474950;
     margin: .1vw 0vw;
@@ -503,7 +510,6 @@ code {
     max-height: 95vh;
     width: 24vw;
     margin-top: 5vw;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
     border-radius: 5px;
 }
 
@@ -512,13 +518,21 @@ code {
     top: 0px;
     max-height: 100%;
     width: 24vw;
-    margin-top: 5vw;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
     border-radius: 5px;
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.property-flex-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px;
 }
 
 .property-rooms-top {
@@ -575,13 +589,6 @@ code {
     color: #414141;
     line-height: 2vw;
     margin-bottom: .5vw;
-}
-
-.property-flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 .rooms-container {
