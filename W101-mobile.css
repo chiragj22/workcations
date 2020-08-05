@@ -193,6 +193,9 @@ body {
     font-size: 3.5vw;
     margin: 2.5vw 0vw;
     gap: 1.5vw;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1.5vw;
 }
 
 .gallery-container div:first-child {

@@ -170,6 +170,9 @@ code {
     font-size: 2em;
     margin: 1em 0px;
     gap: .7em;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1.5vw;
 }
 
 .gallery-container div:first-child {
