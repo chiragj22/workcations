@@ -420,6 +420,7 @@ body {
     font-size: 2.4vw;
     font-weight: 600;
     padding: .93vw 1.93vw;
+    text-transform: capitalize;
 }
 
 .carousel-object-details {
